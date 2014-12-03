@@ -12,6 +12,7 @@ class zendserver::bootstrap inherits zendserver {
     require => File['/usr/local/zend'],
   }
 
+  notify {"vere: zend_gui_completed: ${zend_gui_completed}":}
   if $::zend_gui_completed != 'true' {
     include zendserver::bootstrap::exec
   }
