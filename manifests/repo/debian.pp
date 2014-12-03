@@ -48,8 +48,6 @@ class zendserver::repo::debian {
     }
   }
 
-  notify{"vere: (installing zend with APT from -> )zend_repository: ${zend_repository}":}
-
   apt::source { 'zend-server':
     comment     => 'Zend Server Repository',
     location    => $zend_repository,
