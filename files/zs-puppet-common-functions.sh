@@ -10,8 +10,9 @@ function create_facts () {
 
     FACTER_FOO="bar"
     export FACTER_FOO
+    facter | grep 'foo'
 
-    
+
     _return=$?
   fi
   return $_return
