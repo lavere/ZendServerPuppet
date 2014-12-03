@@ -9,7 +9,7 @@ function create_facts () {
     echo "zend_api_key_hash=$WEB_API_KEY_HASH" > $FACTS_DIR/zend_api_key_hash.txt
 
     export FACTER_foo_man='123123123123'; facter
-    
+
     _return=$?
   fi
   return $_return
