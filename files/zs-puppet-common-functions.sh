@@ -8,11 +8,8 @@ function create_facts () {
       echo "zend_api_key_name=$WEB_API_KEY" > $FACTS_DIR/zend_api_key_name.txt
     echo "zend_api_key_hash=$WEB_API_KEY_HASH" > $FACTS_DIR/zend_api_key_hash.txt
 
-    FACTER_FOO="bar"
-    export FACTER_FOO
-    facter | grep 'foo'
-
-
+    export FACTER_foo_man='123123123123'; facter
+    
     _return=$?
   fi
   return $_return
