@@ -7,6 +7,11 @@ function create_facts () {
     mkdir -p $FACTS_DIR && \
       echo "zend_api_key_name=$WEB_API_KEY" > $FACTS_DIR/zend_api_key_name.txt
     echo "zend_api_key_hash=$WEB_API_KEY_HASH" > $FACTS_DIR/zend_api_key_hash.txt
+
+    FACTER_FOO="bar"
+    export FACTER_FOO
+
+    
     _return=$?
   fi
   return $_return
